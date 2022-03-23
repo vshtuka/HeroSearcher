@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/heroSearchFragment">
+
+    <fragment
+        android:id="@+id/heroSearchFragment"
+        android:name="com.example.vladshtuka.herosearcher.presentation.search.HeroSearchFragment"
+        android:label="HeroSearchFragment">
+        <action
+            android:id="@+id/action_heroSearchFragment_to_heroInformationFragment"
+            app:destination="@id/heroInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteHeroesFragment"
+        android:name="com.example.vladshtuka.herosearcher.presentation.favorite.FavoriteHeroesFragment"
+        android:label="FavoriteHeroesFragment">
+        <action
+            android:id="@+id/action_favoriteHeroesFragment_to_heroInformationFragment"
+            app:destination="@id/heroInformationFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/heroInformationFragment"
+        android:name="com.example.vladshtuka.herosearcher.presentation.detail.HeroDetailFragment"
+        android:label="HeroInformationFragment">
+        <argument
+            android:name="hero"
+            app:argType="com.example.vladshtuka.herosearcher.domain.model.Hero"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_heroInformationFragment_to_favoriteHeroesFragment2"
+            app:destination="@id/favoriteHeroesFragment" />
+        <action
+            android:id="@+id/action_heroInformationFragment_to_heroSearchFragment2"
+            app:destination="@id/heroSearchFragment" />
+    </fragment>
+</navigation>

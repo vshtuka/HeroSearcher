@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HeroSearcher</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="search_hero"><font size="16">Search Breaking Bad hero</font></string>
+    <string name="favorite">Favorite</string>
+    <string name="info">Info</string>
+    <string name="please_enter_hero_name">Please enter hero name!</string>
+    <string name="name">name</string>
+    <string name="your_favorites">Your favorites</string>
+    <string name="hero_information">Hero information</string>
+</resources>
